@@ -3,13 +3,13 @@
     /*Basic Elemntes*/
     
         body {
-            background: #2c2d49;
+            background: black;
             margin: 0;
             padding: 0;
         }
 
             body * {
-                font-family: "Open Sans", Helvetica, sans-serif;
+                font-family: 'Montserrat', sans-serif;
             }
 
             body.loading *, body.loading *:before, body.loading *:after {
@@ -27,7 +27,7 @@
         body, select, textarea, input {
             color: #ffffff;
             font-family: "Open Sans", Helvetica, sans-serif;
-            letter-spacing: 0.080em;
+            letter-spacing: 0.0375em;
             line-height: 1.70em;
             font-size: 14pt;
             font-weight: 400;
@@ -56,6 +56,10 @@
 
         article {
             position: relative;
+        }
+
+        h1,h2,h3,h4,h5 {
+            font-family: "Open Sans", Helvetica, sans-serif;
         }
 
     /*Basic Elemntes*/
@@ -102,10 +106,10 @@
             -ms-filter: brightness(55%);
             filter: brightness(55%);
             opacity: 1;
-            -moz-transition: opacity 3s cubic-bezier(0.61,-0.21, 0.54, 0.34);
-            -webkit-transition: opacity 3s cubic-bezier(0.61,-0.21, 0.54, 0.34);
-            -ms-transition: opacity 3s cubic-bezier(0.61,-0.21, 0.54, 0.34);
-            transition: opacity 3s cubic-bezier(0.61,-0.21, 0.54, 0.34);
+            /* -moz-transition: opacity 0.6s cubic-bezier(0.61,-0.21, 0.54, 0.34); */
+            /* -webkit-transition: opacity 0.6s cubic-bezier(0.61,-0.21, 0.54, 0.34); */
+            /* -ms-transition: opacity 0.6s cubic-bezier(0.61,-0.21, 0.54, 0.34); */
+            /* transition: opacity 0.6s cubic-bezier(0.61,-0.21, 0.54, 0.34); */
         }
 
         .img-background-contact {
@@ -138,7 +142,7 @@
             right: 0;
             bottom: 0;
             z-index: -2;
-            background: #2c2d49;
+            background: black;
             opacity: 0;
         }
 
@@ -159,7 +163,7 @@
             -webkit-transition: opacity 0.2s;
             -ms-transition: opacity 0.2s;
             transition: opacity 0.2s;
-            background: #2c2d49;
+            background: white;
             height: 4em;
             left: 0;
             line-height: 4em;
@@ -197,13 +201,24 @@
                 }
             
                 .logo {
-                    width: 1.8em;
+                    width: 8em;
                     margin: 6px;
                     display: inline-block;
                 }
 
+            .header .bar {
+                width: 100%;
+                height: 0.3em;
+                background-image: url(../images/bar.svg);
+                background-repeat: no-repeat;
+                background-position-x: left;
+                background-size: cover;
+                position: absolute;
+                bottom: 0;
+            }
+
         #navMenu {
-            background: rgb(155,155,170);
+            background: white;
             position: fixed;
             padding: 3em 2em;
             height: 100%;
@@ -229,11 +244,12 @@
 
             #navMenu ul {
                 list-style: none;
-                padding: 0;            
+                padding: 0;       
+                color: #424242;     
             }
 
                 #navMenu ul li {
-                    border-top: solid 1px rgba(44, 45, 73, 0.5);
+                    border-top: solid 1px #009bdb;
                     margin: 0.5em 0 0 0;
                     padding: 0.5em 0 0 0;
                 }
@@ -246,7 +262,7 @@
 
                     #navMenu ul li  a {
                         font-size: 0.8em;
-                        letter-spacing: 0.225em;
+                        letter-spacing: 0.0375em;
                         border: 0;
                         display: block;
                         outline: 0;
@@ -291,7 +307,7 @@
         .page-title {
             display: inline-block;
             font-size: 2.5em;
-            letter-spacing: .15em;
+            letter-spacing: 0.0375em;
             font-weight: 600;
             padding: 0;
             position: relative;
@@ -325,20 +341,49 @@
             }
 
             #front .content .title {  
-                max-width: 55%; 
+                max-width: 45%; 
                 text-align: center;
                 text-shadow: 2px 2px #212239;
                 margin: auto auto auto 1.5em;
             }
 
             #front .content .contacto {  
-                max-width: 45%; 
+                max-width: 55%; 
                 text-align: right;
                 margin: auto 0;
             }
 
-                #front .content .contacto h2 {  
-                    text-shadow: 2px 2px #212239;
+                #front .content .contacto h2 { 
+                    z-index: 5;
+                    white-space: normal;
+                    font-size: 2.5em;
+                    line-height: 1em;
+                    font-weight: 600;
+                    color: rgb(255, 255, 255);
+                    letter-spacing: -1px;
+                    font-family: 'Montserrat', sans-serif;
+                    visibility: inherit;
+                    transition: none 0s ease 0s;
+                    border-width: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    min-height: 0px;
+                    max-height: none;
+                    opacity: 1;
+                    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+                    transform-origin: 50% 50% 0px;
+                }
+                #front .content .contacto .into-text { 
+                    transition: none 0s ease 0s;
+                    text-align: left;
+                    line-height: 47px;
+                    border-width: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    letter-spacing: -2px;
+                    font-weight: 600;
+                    font-size: 40px;
+                    color: #009bdb;
                 }
 
                 #front .content .contacto a {            
@@ -346,33 +391,52 @@
                     margin: 0  0 0 auto; 
                 }
         
-        .title img {
-            width: 2em;
+        .title {
+            color: white;
+            opacity: 1 !important;
         }
         
+            .title img {
+                width: 10em;
+                opacity: 1 !important;
+                fill: white !important;
+                color: white !important;
+            }
+            
         article.grey {
-            background-color: #9b9baa;
+            background-color: #f8f9f9;
+            background-image: url(../images/white-circle-logo.svg);
+            background-position-x: 67vw;
+            background-position-y: center;
+            background-size: 70vw;
+            background-repeat: no-repeat;
+            color: grey;
         }
 
         article.lightgray {
-            background-color: #f6f6f8;
-            color: #2c2d49;
+            background-color: #ffffff;
+            color: grey;
         }
 
             article.grey h2, article.lightgray h2 {
                 margin: 4em auto 3em auto;
                 padding-bottom: 1em;
-                border-bottom: solid 1px rgba(44, 45, 73, 0.5);
-                letter-spacing: 0.2em;
+                border-bottom: solid 1px #5a1280;
+                letter-spacing: 0.05em;
                 font-size: 1.5em;
                 font-weight: 600;
+            }
+
+            article.lightgray h2 {
+                color: #999;
+                border-bottom: solid 1px #009bdb;
             }
 
             article.lightgray h3 {
                 font-size: 1.15em;
                 font-weight: 600;
                 line-height: 1.75em;
-                letter-spacing: .225em;
+                letter-spacing: 0.0375em;
                 line-height: 1em;
                 margin: 0 0 1em;
             }
@@ -412,28 +476,43 @@
                 }
 
                     article.lightgray .benefits .benefice:before {
+                        color: black;
                         display: block;
-                        color: #2c2d49;
                         position: absolute;
                         left: 1em;
                         top: 2em;
                         font-size: 2em;
                     }
+                        article.lightgray .benefits .benefice.green:before {
+                            color: #4fa52b;
+                        }
+                        article.lightgray .benefits .benefice.orange:before {
+                            color: #ee8600;
+                        }
+                        article.lightgray .benefits .benefice.red:before {
+                            color: #cb0811;
+                        }
+                        article.lightgray .benefits .benefice.purple:before {
+                            color: #5a1280;
+                        }
+                        article.lightgray .benefits .benefice.chili-blue:before {
+                            color: #029bdb;
+                        }
 
                     article.lightgray .benefits .benefice:nth-child(2n + 1):before {
                         top: 2.1em;
                     }
 
                     article.lightgray .benefits .benefice.lightblue { 
-                        background:  rgba(44, 45, 73, 0.05);
+                        background:  rgba(60, 60, 60, 0.03);
                     }
                     
                     article.lightgray .benefits .benefice.blue { 
-                        background:  rgba(44, 45, 73, 0.12);
+                        background:  rgba(60, 60, 60, 0.065);
                     }
                     
                     article.lightgray .benefits .benefice.hardblue { 
-                        background:  rgba(44, 45, 73, 0.19);
+                        background:  rgba(60, 60, 60, 0.1);
                     }
 
         .banner-main {
@@ -528,10 +607,10 @@
 		}
 
 		.bkg-contacto{
-			background-image: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/contactoHD.jpg");
-			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/contactoHD.jpg");
-			background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/contactoHD.jpg");
-			background-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/contactoHD.jpg");
+			background-image: -moz-linear-gradient(top, rgba(0,0,0,0.68), rgba(0,0,0,0.3)), url("../images/contactoHD.jpg");
+			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.68), rgba(0,0,0,0.3)), url("../images/contactoHD.jpg");
+			background-image: -ms-linear-gradient(top, rgba(0,0,0,0.68), rgba(0,0,0,0.3)), url("../images/contactoHD.jpg");
+			background-image: linear-gradient(top, rgba(0,0,0,0.68), rgba(0,0,0,0.3)), url("../images/contactoHD.jpg");
             height: inherit !important;
 		}
 
@@ -550,13 +629,41 @@
             }
 
                 #contact .content h2 {
-                    font-size: 1.35em;
-                    letter-spacing: .225em;
+                    font-size: 2em;
+                    z-index: 5;
+                    white-space: normal;
+                    line-height: 1em;
                     font-weight: 600;
+                    color: rgb(255, 255, 255);
+                    letter-spacing: -1px;
+                    font-family: 'Montserrat', sans-serif;
+                    visibility: inherit;
+                    transition: none 0s ease 0s;
+                    border-width: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    min-height: 0px;
+                    max-height: none;
+                    opacity: 1;
+                    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+                    transform-origin: 50% 50% 0px;
                 }  
+
+                    #contact .content .into-text { 
+                        transition: none 0s ease 0s;
+                        text-align: left;
+                        line-height: 47px;
+                        border-width: 0px;
+                        margin: 0px;
+                        padding: 0px;
+                        letter-spacing: -2px;
+                        font-weight: 600;
+                        color: #009bdb;
+                    }
 
                 #contact .content .btn-contact {
                     padding: 2em 0 0 0;
+                    margin-left: 1.5em;
                 }
 
         .main-contact .ban-contact {
@@ -583,7 +690,7 @@
             .main-contact .ban-contact h2 {
                 font-size: 1.8em;
                 line-height: 1.5em;
-                letter-spacing: .225em;
+                letter-spacing: 0.0375em;
                 line-height: 1em;
                 margin: 0 0 1em;
                 font-weight: 600;
@@ -603,19 +710,19 @@
                 margin: .25em auto 1em auto;
                 height: 12.5em;
                 width: 12.5em;
-                border: 2px solid rgba(44, 45, 73, 0.83);
-                background-image: url(http://ivipsolutions.us/uploads/3/5/1/4/3514858/159258.jpg?630);
+                border: 2px solid rgba(73, 73, 73, 0.83);
+                background-image: url('https://lh3.googleusercontent.com/mYK9WixpO39sKcvBmSOdecXH80Su9AQff65rcsarqObk9sUAXEBh9bLeXPPPDHKeB23R1KRqZeBcoMC446JFKWlCxxm5JgxFMylmR05G7sQngJb9I9o61zS9fJTExjoCBpa-_jFkqKWNeKRfkGp8WomcjklFoHV8H86Mv1A1TR2ypaFG7xGaF7TS1JpCJjN7ER8agQpUP3uQhYAywSVPig-35V1dZcynZ3RdYR4xJ1gocDZFYaUYSzP9l_LfEkcbGIUATCGB99lO0pkQq4t8K5OVaKlOtM6Df0IRFeoFTnQcDMjGOUuoi5I-ocRIVNVaPxbKLJjxOWjb08qJdfV25BFw4k_zf-fLrmWSKHiz0XSSTGCgDW2w6JoxgPtgBNfyzCJwOfuQtUu-ROvOL6-jza8eVsgvop_wrPC4Xzw1ToYS_K_sfSoqXl6y8Ht9egI02cDTDjcPlZe7cNq3NJ2YhLB4mK8X_D5UvS63uzxt8wNqrWnpgboqGHiYvywuy0E-rUbzGbO99qYw17GFtlgvAA3spXY-HpKay4k4lheFO7cFuovbb5cjHEGS75-UYgSiJaYQsf9W1qGB1BAK3dgP9rr9dob_rJui-VzqMcegT1tbljSSRwlgx7awdJBi9oCyezDfBnGnm7R6YkXMfz-kaxeJlDbwgduX4IuMmcYsvuBt6DGZeEap44Ln1qD-Vg=s733-w732-h733-no');
                 border-radius: 50%;
                 background-repeat: no-repeat;
                 background-position-x: 35%;
                 background-position-y: top;
-                background-size: 160%;
+                background-size: 100%;
             }
 
             .main-contact .data h3 {
                 font-size: 1.2em;
                 line-height: 1.5em;
-                letter-spacing: .225em;
+                letter-spacing: 0.0375em;
                 line-height: 1em;
                 margin: 0 0 1em;
                 font-weight: 600;
@@ -624,7 +731,7 @@
             .main-contact .data h4 {
                 font-size: 1em;
                 line-height: 1.5em;
-                letter-spacing: .225em;
+                letter-spacing: 0.0375em;
                 line-height: 1em;
                 margin: 0 0 1em;
                 font-weight: 600;
@@ -662,7 +769,7 @@
                 }
 
         #footer {
-            background-color: rgba(44,45,73,.86);
+            background-color: rgba(0, 0, 0, 0.65);
             padding: 5em 0 4em 0;
             text-align: center;
             color: rgba(255,255,255,0.5);
@@ -670,7 +777,7 @@
         }
 
             #footer.solid {
-                background-color: #2c2d49 !important;                
+                background-color: #2d3034 !important;                
             }
 
             #footer ul.social {
@@ -1024,7 +1131,7 @@
             font-size: 0.8em;
             font-weight: 600;
             height: 3.125em;
-            letter-spacing: 0.225em;
+            letter-spacing: 00.0375em;
             line-height: 3.125em;
             padding: 0 2.75em;
             border-radius: 3px;
@@ -1081,7 +1188,7 @@
             }
 
             .btn-blue {
-                background-color: #506e9e;
+                background-color: #029bdb;
                 box-shadow: none !important;
                 color: #ffffff !important;
             }
@@ -1094,7 +1201,7 @@
 
             .btn-menu {
                 background-color: transparent;
-                color: #fff;
+                color: gray;
                 border: none;
                 font-size: 1.3em;
                 font-weight: lighter;
@@ -1202,7 +1309,8 @@
         .scroll-arrows { margin: 6% auto 0; padding: 0 }
         .scroll-arrows.mobile-show { display:none}
         .scroll-arrows>* { position: relative; height: 12px; width: 19px; margin: 0 auto }
-        .scroll-arrows>:after, .scroll-arrows>:before { border-left: solid 4px #fff; padding: 0; position: absolute; content: "" }
+        .scroll-arrows>:after, .scroll-arrows>:before { border-left: solid 4px #777; padding: 0; position: absolute; content: "" }
+        .scroll-arrows.white>:after, .scroll-arrows.white>:before { border-left: solid 4px #fff; padding: 0; position: absolute; content: "" }
         .scroll-arrows>:before { margin: 0; height: 13px; -webkit-transform: rotate(-44deg); -moz-transform: rotate(-44deg); -ms-transform: rotate(-44deg); transform: rotate(-44deg); left: 4px }
         .scroll-arrows>:after { margin: 0; height: 12px; -webkit-transform: rotate(44deg); -moz-transform: rotate(44deg); -ms-transform: rotate(44deg); transform: rotate(44deg); right: 4px }
         .scroll-arrows.up>:before { margin: 0; height: 13px; -webkit-transform: rotate(44deg); -moz-transform: rotate(44deg); -ms-transform: rotate(44deg); transform: rotate(44deg); left: 4px }
@@ -1577,7 +1685,7 @@
             }
 
             .logo {
-                margin: 5px 50vw 5px 0;
+                margin: 5px 40vw 10px 0;
                 position: absolute;
                 right: 0;
                 bottom: 0;
@@ -1724,7 +1832,7 @@
                     }              
 
                     #contact .content h2 {
-                        font-size: 1.1em;
+                        font-size: 2em;
                     }
 
                     #contact .content .btn-contact .btn {  
