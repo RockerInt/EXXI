@@ -211,7 +211,7 @@
                 height: 0.3em;
                 background-image: url(../images/bar.svg);
                 background-repeat: no-repeat;
-                background-position-x: left;
+                background-position-x: -1em;
                 background-size: 105vw;
                 position: absolute;
                 bottom: 0;
