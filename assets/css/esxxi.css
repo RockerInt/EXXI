@@ -212,7 +212,7 @@
                 background-image: url(../images/bar.svg);
                 background-repeat: no-repeat;
                 background-position-x: left;
-                background-size: cover;
+                background-size: 105vw;
                 position: absolute;
                 bottom: 0;
             }
