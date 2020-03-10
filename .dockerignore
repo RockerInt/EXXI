@@ -1,0 +1,24 @@
+.git
+Dockerfile
+.DS_Store
+.gitignore
+*.md
+env.*
+devops
+.dockerenv
+.dockerignore
+CNAME
+LICENSE
+bin
+opt
+root
+run
+sbin
+srv
+sys
+usr
+var
+
+# To prevent storing dev/temporary container data
+*.csv
+tmp
