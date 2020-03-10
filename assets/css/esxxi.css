@@ -1835,10 +1835,14 @@
                         font-size: 2em;
                     }
 
-                    #contact .content .btn-contact .btn {  
-                        padding: 0;
-                        margin: 0;
+                    #contact .content .btn-contact { 
+                        margin-left: 0;
                     }
+
+			    #contact .content .btn-contact .btn {  
+				padding: 0;
+				margin: 0;
+			    }
             
             #footer ul.social li a {
                 font-size: 1.35em;
